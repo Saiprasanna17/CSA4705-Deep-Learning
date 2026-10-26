@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+P_S = 0.30
+P_Prize_S = 0.70
+P_Prize_NoS = 0.10
+P_Prize = P_Prize_S * P_S + P_Prize_NoS * (1 - P_S)
+P_S_Prize = (P_Prize_S * P_S) / P_Prize
+print("Prior probability of spam:", P_S)
+print("Posterior probability of spam:", P_S_Prize)
+plt.bar(["Prior", "Posterior"], [P_S, P_S_Prize])
+plt.ylabel("Probability")
+plt.title("Spam Probability Before and After Observing Prize")
+plt.show()
