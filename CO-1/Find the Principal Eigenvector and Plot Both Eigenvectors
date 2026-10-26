@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+C = np.array([[5, 2],
+              [2, 2]])
+eigenvalues, eigenvectors = np.linalg.eig(C)
+print("Eigenvalues:")
+…     plt.quiver(0, 0, eigenvectors[0, j], eigenvectors[1, j],
+     angles='xy', scale_units='xy', scale=1)
+plt.xlim(-1, 1)
+plt.ylim(-1, 1)
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Eigenvectors of Covariance Matrix")
+plt.grid()
+plt.show()
