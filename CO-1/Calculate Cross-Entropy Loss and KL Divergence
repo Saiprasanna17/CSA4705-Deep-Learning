@@ -1,0 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+Y = np.array([0, 1, 0, 0])
+P = np.array([0.1, 0.6, 0.2, 0.1])
+cross_entropy = -np.sum(Y * np.log(P))
+kl = np.sum(Y[Y > 0] * np.log(Y[Y > 0] / P[Y > 0]))
+plt.title("Actual vs Predicted Distribution")
+plt.legend()
+plt.show()
